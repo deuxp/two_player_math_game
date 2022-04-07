@@ -2,8 +2,9 @@
 State:
 ---
 1. name
-2. score - private
-3. lives
+2. lives
+
+verb: reduce lives
 
 == Game == noun -----------------------------------------------------------
 No state
@@ -13,17 +14,20 @@ verb1 - Engine -> Loop for the turns to occur
 stretch
 * keeps track of the player at the top (counter%2) and changes at the bottom (counter+1)  
 
-== Turn == noun -----------------------------------------------------------
-State:
----
-1. guess
-Asks the Math Question
-            question(num1, num2) as params
-                returns true or false
-            
+gets question
             analyze_result(result_player1, result_player2) - setState
                 change state in Player => 
                     correct: give point |OR| incorrect: take lives
+
+game calls the reduce life
+
+
+== Question == noun -----------------------------------------------------------
+    Generate the question only / provide answer -> or just the numbers
+
+    ask question(num1, num2) as params
+                returns true or false
+
 
 ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### 
 

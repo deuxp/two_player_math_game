@@ -1,5 +1,5 @@
 require_relative 'classes/player'
-require_relative 'classes/turn'
+require_relative 'classes/question'
 
 # game
 class GameEngine
@@ -7,12 +7,13 @@ class GameEngine
 
     def start
         # ask for player names
-        # get the 2 numbers from the prompt
         puts "Player 1. What is your name?"
-        p1_name = gets.chomp
+        name1 = gets.chomp
         puts "Player 2. What is your name?"
-        p2_name = gets.chomp
-        # init the 2 characters -> they live in the game
+        name2 = gets.chomp
+
+        p1 = Player.new(name1)
+        p2 = Player.new(name2)
         
         # While player1 lives > 0 AND player2 lives > 0 # ---------------------------
         # start screen:
@@ -26,7 +27,7 @@ class GameEngine
         #     get player2 guess - await
         #         store it
         
-        puts "p1 name: #{p1_name} and p2 name: #{p2_name}"
+        puts "p1 name: #{p1.name} and p2 name: #{p2.name}"
     end # ----------------------------------------------------------------------
     
    

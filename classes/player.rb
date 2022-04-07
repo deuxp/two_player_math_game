@@ -1,11 +1,15 @@
 
 class Player
-    attr_accessor :name, :lives, :dead, :score
+    attr_accessor :name
     
     def initialize(name)
         @name = name
         @lives = 3
-        @score = 0
     end
+
+    def reduce_life
+        self.lives -= 1
+    end
+    
 end
 
