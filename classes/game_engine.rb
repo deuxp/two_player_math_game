@@ -1,6 +1,10 @@
-class GameEngine
+require_relative '../modules/title_screen'
+include TitleScreen
 
+
+class GameEngine
     def start
+        TitleScreen::banner
         # ask for player names
         puts "Player 1. What is your name?"
         name1 = gets.chomp
