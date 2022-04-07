@@ -1,13 +1,13 @@
 class Question
-    attr_reader :num_1, :num_2
+    attr_reader :num1, :num2
     
     def initialize
-        @num_1 = rand(1..10)
-        @num_2 = rand(1..10)
+        @num1 = rand(1..10)
+        @num2 = rand(1..10)
     end
 
     def answer
-        self.num_1 + self.num_2
+        self.num1 + self.num2
     end
 
 end
