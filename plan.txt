@@ -10,8 +10,8 @@ No state
 verb1 - Engine -> Loop for the turns to occur
                   Check turn results at the beginning of each turn
                     if 0 game over
-
-                            
+stretch
+* keeps track of the player at the top (counter%2) and changes at the bottom (counter+1)  
 
 == Turn == noun -----------------------------------------------------------
 State:
@@ -35,5 +35,5 @@ The Game class will hold the data related to the game, specifically it will
 track the guesses informed by each player. It will provide the loop for the
 game to run, and declare a winner. Does not access the player data
 
-behaviour of the game
-change the state of the players lives
+The Turn class will be incharge of the behaviour of the game. It will CRUD the 
+state of the Player. As well as determine the winner.
